@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <title>APP Eliquis</title>
+</head>
+
+<body>
+
+	<a href="javascript:chiudipop('slide7.html')" class="overlay" id="sm"></a>
+     <div class="popup" id="sm" style="background-color:#FFF; height:560px; width: 822px;">
+        <iframe class="iframe" src="rcp.html" id="lavoro1" >
+          <p>Your browser does not support iframes.</p>
+        </iframe>
+        <a class="close" href="javascript:chiudipop('slide7.html')" ></a>
+    </div>
+
+    <div id="container">
+        <div class="main_content">
+        	<div id="img_container">
+        		<img src="img/Slide-7.jpg" width="1024" height="768" style="z-index:10"/>
+            </div>
+            <div id="up_menu">
+            	<a id="a_up_menu" href="javascript:alza_menu()"></a>
+            </div>
+            <div id="menu">
+            		<div class="float_left">
+                        <ul>
+                            <li id="home"><a href="javascript:spostati('slide1.html')"></a></li>
+                            <li id="paz_trattare"><a href="javascript:spostati('slide2.html')"></a></li>
+                            <li id="terapie"><a href="javascript:spostati('slide3.html')"></a></li>
+                            <li id="paz_controllati"><a href="javascript:spostati('slide7.html')"></a></li>
+                        </ul>
+                        <div id="menu_dwn">
+                            <a id="a_menu_dwn" href="javascript:abbassa_menu()"> </a>
+                        </div>
+                    </div>
+                    <div id="rcp" class="float_right">
+                    	<a id="a_rcp" href="javascript:apripop('slide7.html#sm')"> </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+	<script src="js/funzioni.js" language="javascript" type="text/javascript"></script>
+    <script src="js/modale.js"></script>
+    
+	<script type="text/javascript" src="js/graph.js"></script>
+    
+    <script type="text/javascript">
+    /*
+    var id_img;  // elenco id delle immagini
+	var index = 0;
+	
+	function printImg( ){        
+        // cambio id all'oggetto main content
+		if(index<4){
+			$(".main_content").attr("id",id_img[index]); 
+			index++;
+		}
+    }
+	
+	$( function(){
+		var basePath = "slide";
+		id_img = new Array(); 
+		id_img[0] = (basePath + '7' );
+		id_img[1] = ( basePath + '8' );
+		id_img[2] = ( basePath + '9' );
+		id_img[3] = ( basePath + '10' );	
+		window.setInterval(function(){printImg()},5000);
+	});*/
+	
+	var imgs;  // elenco delle immagini
+    var imgListObj;  // oggetto che contiene le immagini
+    
+    function printImg( index, imgListObj ){
+        
+        // ottengo il path della nuova immagine da visualizzare
+        var imgPath = imgListObj.getImgAtIndex( index ).getPath();
+		//$(".main_content").attr("id","newId");
+        
+        var imgNode = $( '<img>' )
+            .attr( 'width', 1024 )
+            .attr( 'height', 768 )
+            .attr( 'src', imgPath )
+			.attr( 'z-index', 10 )
+            .load( function(){
+                $( '#img_container' ).html( imgNode );
+            });
+        
+    }
+    
+    
+    $( function(){
+        
+        // creo elenco provvisorio con le immagini da usare
+        var basePath = 'img/Slide-';  // percorso base di dove si trovano le immagini
+        imgs = [  /* #TODO editare il seguente elenco per adattare ad altri grafici */
+            new ImgObj( 1, basePath + '7.jpg' ),
+            new ImgObj( 2, basePath + '8.jpg' ),
+            new ImgObj( 3, basePath + '9.jpg' ),
+            new ImgObj( 4, basePath + '10.jpg' ),
+        ];
+        
+        // creo l'oggetto con le immagini da usare
+        imgListObj = new ImgList( imgs );
+        window.setInterval(
+			function(){
+                
+                // ottengo l'indice dell'immagine attualmente visualizzata
+                var index = imgListObj.getIndex();
+                
+                // setto l'indice della nuova immagine da visualizzare
+                var nextIndex = index + 1;
+                
+                // se eiste una nuova immagine da visualizzare
+                if( imgListObj.setIndex( nextIndex ) ){
+                    
+                    // stampo immagine
+                    printImg( nextIndex, imgListObj);
+                    
+                }
+            },5000);
+        
+        
+        // stampa prima immagine di partenza
+        
+        // ottengo l'indice dell'immagine attualmente visualizzata
+        var index = imgListObj.getIndex();
+        // stampo immagine
+        printImg( index, imgListObj);
+        
+    });
+	
+</script>
+    
+</body>
+</html>

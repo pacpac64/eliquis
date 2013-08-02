@@ -1,0 +1,366 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	padding:0;
+	margin:0;	
+}
+
+.clear{
+	/* This class clears the floats */
+	clear:both;
+}
+
+.float_left{
+	float:left;	
+}
+.float_right{
+	float:right;
+}
+
+#container{
+	
+	margin-left: auto ;
+  	margin-right: auto ;
+	width: 1024px;
+	height: 768px;
+}
+
+.main_content{
+	margin-left: auto ;
+  	margin-right: auto ;
+	position: relative;
+	width: 1024px;
+	height: 768px;	
+}
+#slide1{
+	background:url(../img/Slide-1.jpg);	
+	background-size: 1024px 768px;
+}
+#slide2{
+	background:url(../img/Slide-2.jpg);	
+	background-size: 1024px 768px;
+}
+#slide3{
+	background:url(../img/Slide-3.jpg);
+	background-size: 1024px 768px;
+}
+#slide4{
+	background:url(../img/Slide-4.jpg);	
+	background-size: 1024px 768px;
+}
+#slide5{
+	background:url(../img/Slide-5.jpg);	
+	background-size: 1024px 768px;
+}
+#slide6{
+	background:url(../img/Slide-6.jpg);	
+	background-size: 1024px 768px;
+}
+#slide7{
+	background:url(../img/Slide-7.jpg);	
+	background-size: 1024px 768px;
+}
+
+#slide8{
+	background:url(../img/Slide-8.jpg);	
+	background-size: 1024px 768px;
+}
+#slide9{
+	background:url(../img/Slide-9.jpg);	
+	background-size: 1024px 768px;
+}
+#slide10{
+	background:url(../img/Slide-10.jpg);	
+	background-size: 1024px 768px;
+}
+
+
+
+#slide11{
+	background:url(../img/Slide-11.jpg);
+	background-size: 1024px 768px;
+}
+#slide12{
+	background:url(../img/Slide-12.jpg);
+	background-size: 1024px 768px;
+}
+.slides{
+	width: 1024px;
+	height: 768px;	
+}
+
+/* ------ RCP ------ */
+.iframe{
+	/*-webkit-overflow-scrolling: touch;*/
+	overflow-x: hidden;
+	border:none;
+	width: 792px;
+	height: 550px;
+}
+
+.rcp{
+	width: 822px;
+	height: 560px;	
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	
+	overflow-x: hidden;
+}
+
+
+/* ------ slide3 asa vka ------ */
+#link_container{
+	
+	z-index: 50;
+	position:absolute;
+	width: 975px;
+	height:155px;
+	margin-top: 390px;
+	margin-left:45px;
+}
+
+#asa{
+	z-index: 50;
+	float: left;
+	width:300px;
+	height:155px;
+}
+#a_asa{
+	display:block;
+	width:300px;
+	height:155px;
+}
+#vka{
+	z-index: 50;
+	float: left;
+	width:300px;
+	height:155px;
+}
+#a_vka{
+	display:block;
+	width:300px;
+	height:155px;
+}
+#space{
+	z-index: 50;
+	float: left;
+	width:330px;
+	height:155px;
+}
+#a_space{
+	display:block;
+	width:330px;
+	height:155px;
+}
+
+#space_nav{
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 50;
+	float: left;
+	width:744px;
+	height:155px;
+	margin-left:140px;
+}
+#a_space_nav{
+	display:block;
+	width:744px;
+	height:155px;
+}
+
+#right_space{
+	width: 884px;
+	height:	121px;
+}
+#a_right_space{
+	display:block;
+	width: 884px;
+	height:	121px;
+}
+
+
+#left_space{
+	width: 884px;
+	height:	121px;
+	margin-left: 140px;
+}
+#a_left_space{
+	display:block;
+	width: 884px;
+	height:	121px;
+}
+
+/* ------ menu navigation ------ */
+
+#content_navigation{
+	z-index:50;
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	width: 1024px;
+	height: 121px;
+	
+}
+
+#content_left{
+	
+	z-index: 50;
+	width:881px;
+}
+/*
+#up_menu_arrow{
+	width: 744px;
+	height: 121px;
+	margin-left: 140px;
+	margin-right: 140px;	
+}
+#a_up_menu_arrow{
+	z-index:10;
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	width: 744px;
+	height: 121px;
+	
+	margin-left: 140px;
+	margin-right: 140px;
+}
+*/
+#left_arrow{
+	z-index: 50;
+	float:left;
+	width:140px;
+	height: 121px;
+}
+
+#right_arrow{	
+	z-index: 50;
+	float: right;
+	width:140px;
+	height: 121px;
+}
+
+.arrow{
+	display:block;
+	width:140px;
+	height: 121px;
+}
+
+#up_menu{
+	z-index:10;
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	width: 1024px;
+	height: 768px;/*
+	margin-left: 140px;
+	margin-right: 140px;*/	
+}
+#a_up_menu{
+	z-index:10;
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	width: 1024px;
+	height: 768px;	
+}
+/* ------ menu ------ */
+#menu{
+	z-index: 50;
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	width: 1024px;
+	height: 121px;
+	background:rgba(0,0,0,0.3);
+	
+	/* ms explorer */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000, endColorstr=#66000000)";
+	display: none;
+}
+
+#a_menu_dwn{
+	display:block;
+	width: 350px;
+	height:121px;
+}
+
+#menu_dwn{
+	margin:0;
+	width: 350px;
+	height:121px;
+	margin-left: 468px;
+	
+}
+
+#menu ul {
+	z-index: 100;
+	margin:0;
+	padding:0;
+	margin-left: 32px;
+	margin-top: 22px;
+	list-style-type:none;
+}
+
+#rcp{
+	width:137px;
+	height:86px;
+	float:right;
+	
+	margin-right: 47px;
+	margin-top:20px;
+	
+	background: url(../img/rcp.png) no-repeat;
+	background-size: 137px 86px;
+}
+
+#a_rcp{
+	width:137px;
+	height:86px;
+	float:right;
+}
+
+
+#menu ul li {
+	z-index:100;
+	float:left;
+	margin:0;
+	padding:0;
+	margin-right:7px;
+	
+	width: 102px;
+	height: 77px;
+	
+	background-size: 102px 77px;
+}
+
+#menu ul li a {
+	display:block;
+	z-index:100;
+	width: 102px;
+	height: 77px;
+	top:0;
+	left:0;
+}
+
+.img_menu{
+	width: 102px;
+	height: 77px;
+}
+
+#home{
+	background:url(../img/home.jpg) no-repeat;
+}
+
+#paz_trattare{
+	background:url(../img/pazienti_da_trattare.jpg) no-repeat;
+}
+
+#terapie{
+	background:url(../img/terapie_utilizzate.jpg) no-repeat;
+}
+
+#paz_controllati{
+	background:url(../img/pazienti_controllati.jpg) no-repeat;
+}

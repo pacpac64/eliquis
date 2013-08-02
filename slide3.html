@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <title>APP Eliquis</title>
+</head>
+
+<body>
+
+	<a href="javascript:chiudipop('slide3.html')" class="overlay" id="sm"></a>
+ 	<div class="popup" id="sm" style="background-color:#FFF; height:560px; width: 822px;">
+        <iframe class="iframe" src="rcp.html" id="lavoro1" >
+          <p>Your browser does not support iframes.</p>
+        </iframe>
+        <a class="close" href="javascript:chiudipop('slide3.html')" ></a>
+    </div>
+
+    <div id="container">
+        <div class="main_content" id="slide3">
+            <div id="link_container">
+            	<div id="asa"><a id="a_asa" href="javascript:spostati('slide11.html')"></a></div>
+                <div id="space"><a id="a_space" href="javascript:alza_menu()"></a></div>
+                <div id="vka"><a id="a_vka" href="javascript:spostati('slide4.html')"></a></div>
+            </div>
+            <div id="up_menu">
+            	<a id="a_up_menu" href="javascript:alza_menu()"></a>
+            </div>
+            <div id="menu">
+            		<div class="float_left">
+                       <ul>
+                            <li id="home"><a href="javascript:spostati('slide1.html')"></a></li>
+                            <li id="paz_trattare"><a href="javascript:spostati('slide2.html')"></a></li>
+                            <li id="terapie"><a href="javascript:spostati('#')"></a></li>
+                            <li id="paz_controllati"><a href="javascript:spostati('slide7.html')"></a></li>
+                        </ul>
+                        <div id="menu_dwn">
+                            <a id="a_menu_dwn" href="javascript:abbassa_menu()"> </a>
+                        </div>
+                    </div>
+                    <div id="rcp" class="float_right">
+                    	<a id="a_rcp" href="javascript:apripop('slide3.html#sm')"> </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+	<script src="js/funzioni.js" language="javascript" type="text/javascript"></script>
+    <script src="js/modale.js"></script>
+</body>
+</html>
